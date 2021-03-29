@@ -1,4 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 0.875rem;
+}
+
+.main-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #502050;
+  line-height: 1.875rem;
+}
+
+@media (min-width: 400px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
+.description {
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #937b92;
+}
+
+.rank-text {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #502050;
+}
+
+.infos .name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: white;
+}
+
+.infos .stato {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #ee68a4;
+}
+
+.review-text {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: white;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -16,6 +65,85 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: white;
+}
+
+body .wrapper {
+  width: 100%;
+  padding: 5rem 1.5rem 6.25rem;
+}
+
+body .wrapper .title {
+  text-align: center;
+  margin-bottom: 2.875rem;
+}
+
+body .wrapper .title p:first-child {
+  margin-bottom: 1.5rem;
+}
+
+body .wrapper .ranking {
+  width: 100%;
+  margin-bottom: 2.875rem;
+}
+
+body .wrapper .ranking .rank {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f7f2f7;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+body .wrapper .ranking .rank .stars {
+  margin-bottom: 0.875rem;
+}
+
+body .wrapper .ranking .rank .stars .star {
+  margin-right: 0.3125rem;
+}
+
+body .wrapper .ranking .rank .stars .star:last-child {
+  margin-right: 0;
+}
+
+body .wrapper .ranking .rank:last-child {
+  margin-bottom: 0;
+}
+
+body .wrapper .reviews .review {
+  background-color: #502050;
+  padding: 2.5rem 1.5rem 2.25rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+body .wrapper .reviews .review .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.875rem;
+}
+
+body .wrapper .reviews .review .header .photo img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+body .wrapper .reviews .review .header .infos .name {
+  margin-bottom: 0.3125rem;
+}
+
+body .wrapper .reviews .review:last-child {
+  margin-bottom: 0;
 }
 
 .attribution {

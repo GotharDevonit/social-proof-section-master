@@ -1,1 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: $font-14px;
+}
+
+.main-title {
+    font-size: $font-30px;
+    font-weight: 700;
+    color: $color-darkmagenta;
+    line-height: $font-30px;
+
+    @media(min-width: $width-middle) {
+        font-size: $font-40px;
+    }
+}
+
+.description {
+    font-weight: 500;
+    line-height: $font-24px;
+    color: $color-darkgraymagenta;
+}
+
+.rank-text {
+    font-size: $font-13px;
+    font-weight: 700;
+    color: $color-darkmagenta;
+}
+
+.infos .name {
+    font-size: $font-13px;
+    font-weight: 700;
+    color: $color-white;
+}
+
+.infos .stato {
+    font-size: $font-13px;
+    font-weight: 400;
+    color: $color-softpink;
+}
+
+.review-text {
+    font-size: $font-13px;
+    font-weight: 400;
+    line-height: $font-20px;
+    color: $color-white;
+}
