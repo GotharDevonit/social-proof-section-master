@@ -76,21 +76,45 @@ body .wrapper {
   background-position: top left, bottom right;
 }
 
-body .wrapper .title {
+@media (min-width: 400px) {
+  body .wrapper {
+    padding: 8.125rem 10.375rem 6.25rem;
+    background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+  }
+}
+
+@media (min-width: 400px) {
+  body .wrapper .upper-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .wrapper .upper-part .title,
+  body .wrapper .upper-part .ranking {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+body .wrapper .upper-part .title {
   text-align: center;
   margin-bottom: 2.875rem;
 }
 
-body .wrapper .title p:first-child {
+body .wrapper .upper-part .title p:first-child {
   margin-bottom: 1.5rem;
 }
 
-body .wrapper .ranking {
+body .wrapper .upper-part .ranking {
   width: 100%;
   margin-bottom: 2.875rem;
 }
 
-body .wrapper .ranking .rank {
+body .wrapper .upper-part .ranking .rank {
   width: 100%;
   padding: 1rem;
   background-color: #f7f2f7;
@@ -99,19 +123,19 @@ body .wrapper .ranking .rank {
   margin-bottom: 1rem;
 }
 
-body .wrapper .ranking .rank .stars {
+body .wrapper .upper-part .ranking .rank .stars {
   margin-bottom: 0.875rem;
 }
 
-body .wrapper .ranking .rank .stars .star {
+body .wrapper .upper-part .ranking .rank .stars .star {
   margin-right: 0.3125rem;
 }
 
-body .wrapper .ranking .rank .stars .star:last-child {
+body .wrapper .upper-part .ranking .rank .stars .star:last-child {
   margin-right: 0;
 }
 
-body .wrapper .ranking .rank:last-child {
+body .wrapper .upper-part .ranking .rank:last-child {
   margin-bottom: 0;
 }
 
