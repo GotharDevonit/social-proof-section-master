@@ -289,6 +289,14 @@ body .wrapper .group .reviews .review:last-child {
 }
 
 .attribution {
-  display: none;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 920px) {
+  .attribution {
+    position: absolute;
+    bottom: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

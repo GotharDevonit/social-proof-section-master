@@ -184,5 +184,11 @@ body {
 }
 
 .attribution {
-    display: none;
+    display: block;
+    position: relative;
+
+    @media(min-width: $width-middle) {
+        position: absolute;
+        bottom: 0;
+    }
 }
