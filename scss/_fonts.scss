@@ -10,9 +10,10 @@ body {
     font-weight: 700;
     color: $color-darkmagenta;
     line-height: $font-30px;
-
+    
     @media(min-width: $width-middle) {
-        font-size: $font-40px;
+        font-size: $font-46px;
+        line-height: $font-46px;
     }
 }
 

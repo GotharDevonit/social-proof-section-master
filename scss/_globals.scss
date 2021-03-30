@@ -23,91 +23,161 @@ body {
         background-position: top left, bottom right;
 
         @media(min-width: $width-middle) {
-            padding: $size-130px $size-166px $size-100px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
         }
 
-        .upper-part {
+        .group {
             @media(min-width: $width-middle) {
-                display: flex;
-                justify-content: space-between;
-
-                .title,
-                .ranking {
-                    flex: 1;
-                }
+                max-width: $size-1110px;
+                max-height: $size-574px;
             }
 
-            .title {
-                text-align: center;
-                margin-bottom: $size-46px;
-
-                p:first-child {
-                    margin-bottom: $size-24px;
+            .upper-part {
+                @media(min-width: $width-middle) {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: $size-80px;
                 }
-            }
 
-            .ranking {
-                width: 100%;
-                margin-bottom: $size-46px;
-
-                .rank {
-                    width: 100%;
-                    padding: $size-16px;
-                    background-color: $color-lightgraymagenta;
-                    border-radius: $size-8px;
+                .title {
                     text-align: center;
-                    margin-bottom: $size-16px;
+                    margin-bottom: $size-46px;
 
-                    .stars {
-                        margin-bottom: $size-14px;
+                    @media(min-width: $width-middle) {
+                        text-align: left;
+                        flex: 1;
+                        max-width: $size-425px;
+                        margin-bottom: 0;
+                    }
 
-                        .star {
-                            margin-right: $size-5px;
+                    p:first-child {
+                        margin-bottom: $size-24px;
+                    }
+                }
+
+                .ranking {
+                    width: 100%;
+                    margin-bottom: $size-46px;
+
+                    @media(min-width: $width-middle) {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex: 1;
+                        max-width: $size-540px;
+                        margin-bottom: 0;
+                    }
+
+                    .rank {
+                        width: 100%;
+                        padding: $size-16px;
+                        background-color: $color-lightgraymagenta;
+                        border-radius: $size-8px;
+                        text-align: center;
+                        margin-bottom: $size-16px;
+
+                        @media(min-width: $width-middle) {
+                            padding-left: $size-30px;
+                            width: $size-446px;
+                            align-self: center;
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            
+                            &:first-child {
+                                align-self: start;
+                            }
+                            &:last-child {
+                                align-self: end;
+                            }
+
+                            p {
+                                display: inline-block;
+                            }
                         }
-                        .star:last-child {
-                            margin-right: 0;
+
+                        .stars {
+                            margin-bottom: $size-14px;
+
+                            @media(min-width: $width-middle) {
+                                margin-bottom: 0;
+                                margin-right: $size-36px;
+                            }
+
+                            .star {
+                                margin-right: $size-5px;
+                            }
+                            .star:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .rank:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .reviews {
+                @media(min-width: $width-middle) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .review {
+                    background-color: $color-darkmagenta;
+                    padding: $size-40px $size-24px $size-36px;
+                    margin-bottom: $size-16px;
+                    border-radius: $size-8px;
+
+                    @media(min-width: $width-middle) {
+                        margin-top: $size-16px;
+                        margin-bottom: $size-16px;
+                        
+                        &:not(:last-child) {
+                            margin-right: $size-30px;
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                            margin-bottom: $size-32px;
+                        }
+                        &:last-child {
+                            margin-top: $size-32px;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .header {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-bottom: $size-30px;
+
+                        .photo {
+
+                            img {
+                                width: $size-40px;
+                                height: $size-40px;
+                                border-radius: 50%;
+                                margin-right: $size-24px;
+                            }
+                        }
+
+                        .infos {
+                            .name {
+                                margin-bottom: $size-5px;
+                            }
                         }
                     }
                 }
-                .rank:last-child {
+                .review:last-child {
                     margin-bottom: 0;
                 }
-            }
-        }
-
-        .reviews {
-            .review {
-                background-color: $color-darkmagenta;
-                padding: $size-40px $size-24px $size-36px;
-                margin-bottom: $size-16px;
-                border-radius: $size-8px;
-
-                .header {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    margin-bottom: $size-30px;
-
-                    .photo {
-
-                        img {
-                            width: $size-40px;
-                            height: $size-40px;
-                            border-radius: 50%;
-                            margin-right: $size-24px;
-                        }
-                    }
-
-                    .infos {
-                        .name {
-                            margin-bottom: $size-5px;
-                        }
-                    }
-                }
-            }
-            .review:last-child {
-                margin-bottom: 0;
             }
         }
     }

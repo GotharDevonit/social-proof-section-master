@@ -11,9 +11,10 @@ body {
   line-height: 1.875rem;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 920px) {
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2.875rem;
+    line-height: 2.875rem;
   }
 }
 
@@ -76,45 +77,88 @@ body .wrapper {
   background-position: top left, bottom right;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 920px) {
   body .wrapper {
-    padding: 8.125rem 10.375rem 6.25rem;
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
   }
 }
 
-@media (min-width: 400px) {
-  body .wrapper .upper-part {
+@media (min-width: 920px) {
+  body .wrapper .group {
+    max-width: 69.375rem;
+    max-height: 35.875rem;
+  }
+}
+
+@media (min-width: 920px) {
+  body .wrapper .group .upper-part {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  body .wrapper .upper-part .title,
-  body .wrapper .upper-part .ranking {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    margin-bottom: 5rem;
   }
 }
 
-body .wrapper .upper-part .title {
+body .wrapper .group .upper-part .title {
   text-align: center;
   margin-bottom: 2.875rem;
 }
 
-body .wrapper .upper-part .title p:first-child {
+@media (min-width: 920px) {
+  body .wrapper .group .upper-part .title {
+    text-align: left;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 26.5625rem;
+    margin-bottom: 0;
+  }
+}
+
+body .wrapper .group .upper-part .title p:first-child {
   margin-bottom: 1.5rem;
 }
 
-body .wrapper .upper-part .ranking {
+body .wrapper .group .upper-part .ranking {
   width: 100%;
   margin-bottom: 2.875rem;
 }
 
-body .wrapper .upper-part .ranking .rank {
+@media (min-width: 920px) {
+  body .wrapper .group .upper-part .ranking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 33.75rem;
+    margin-bottom: 0;
+  }
+}
+
+body .wrapper .group .upper-part .ranking .rank {
   width: 100%;
   padding: 1rem;
   background-color: #f7f2f7;
@@ -123,30 +167,100 @@ body .wrapper .upper-part .ranking .rank {
   margin-bottom: 1rem;
 }
 
-body .wrapper .upper-part .ranking .rank .stars {
+@media (min-width: 920px) {
+  body .wrapper .group .upper-part .ranking .rank {
+    padding-left: 1.875rem;
+    width: 27.875rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .wrapper .group .upper-part .ranking .rank:first-child {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  body .wrapper .group .upper-part .ranking .rank:last-child {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  body .wrapper .group .upper-part .ranking .rank p {
+    display: inline-block;
+  }
+}
+
+body .wrapper .group .upper-part .ranking .rank .stars {
   margin-bottom: 0.875rem;
 }
 
-body .wrapper .upper-part .ranking .rank .stars .star {
+@media (min-width: 920px) {
+  body .wrapper .group .upper-part .ranking .rank .stars {
+    margin-bottom: 0;
+    margin-right: 2.25rem;
+  }
+}
+
+body .wrapper .group .upper-part .ranking .rank .stars .star {
   margin-right: 0.3125rem;
 }
 
-body .wrapper .upper-part .ranking .rank .stars .star:last-child {
+body .wrapper .group .upper-part .ranking .rank .stars .star:last-child {
   margin-right: 0;
 }
 
-body .wrapper .upper-part .ranking .rank:last-child {
+body .wrapper .group .upper-part .ranking .rank:last-child {
   margin-bottom: 0;
 }
 
-body .wrapper .reviews .review {
+@media (min-width: 920px) {
+  body .wrapper .group .reviews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .wrapper .group .reviews .review {
   background-color: #502050;
   padding: 2.5rem 1.5rem 2.25rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
 
-body .wrapper .reviews .review .header {
+@media (min-width: 920px) {
+  body .wrapper .group .reviews .review {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  body .wrapper .group .reviews .review:not(:last-child) {
+    margin-right: 1.875rem;
+  }
+  body .wrapper .group .reviews .review:first-child {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  body .wrapper .group .reviews .review:last-child {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+body .wrapper .group .reviews .review .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,18 +273,18 @@ body .wrapper .reviews .review .header {
   margin-bottom: 1.875rem;
 }
 
-body .wrapper .reviews .review .header .photo img {
+body .wrapper .group .reviews .review .header .photo img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   margin-right: 1.5rem;
 }
 
-body .wrapper .reviews .review .header .infos .name {
+body .wrapper .group .reviews .review .header .infos .name {
   margin-bottom: 0.3125rem;
 }
 
-body .wrapper .reviews .review:last-child {
+body .wrapper .group .reviews .review:last-child {
   margin-bottom: 0;
 }
 
